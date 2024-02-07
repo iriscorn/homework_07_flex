@@ -1,0 +1,65 @@
+.footer {
+    background-color: $add_main-color;
+    margin-top: 80px;
+
+    .footer__section {
+        display: flex;
+        padding: 60px 21%;
+        gap: 0 30px;
+
+        .footer__container {
+            width: 25%;
+            .footer__container__heading {
+                @include font_style ($additional_color, 500, 1rem);
+                padding-bottom: 30px;
+                border-bottom: 1px solid $main_color;
+            }
+            .foter__nav {
+                padding-top: 25px;
+                .footer__list {
+                    .footer__list {
+                        @include font_style (#828282, 400, 0.75rem);
+                        line-height: 28px;
+                    }
+                }
+            }
+        }    
+    }
+    .footer__section--spec {
+        @include flex (row, space-between, center);
+        padding: 38px 21%;
+        gap: 30px;
+        border-top: 1px solid $main_color;
+
+        .footer__container--mod {
+            display: flex;
+            gap: 0 20px;
+        }
+        .footer__container--spec {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            .foter__container__link--mod {
+                color: $additional_color;
+            }
+            .footer__btn {
+                @include btn ($primary_color, $add_main-color, $additional_color);
+                padding: 12px 0;
+            }
+            .footer__btn:hover {
+                background-color: $primary_color;
+                color: $add_main-color;
+                transition: all 1s;
+                cursor: pointer;
+            }
+        }
+    }
+    .footer__section--mod {
+        @include flex (row, space-between, center);
+        background-color: $main_color;
+        padding: 25px 21%;
+        .foter__section__text {
+            @include font_style (#828282, 400, 0.75rem)
+        }
+    }
+}

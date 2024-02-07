@@ -1,0 +1,76 @@
+.header {
+    background-color: $add_main-color;
+
+    .header__section__nav {
+        @include flex (row, center, center);
+        background-color: $main_color;
+
+        .header__nav {
+            display: flex;
+            gap: 0 30px;
+            padding: 17px 0;
+
+            .nav__list {
+                .nav__link {
+                    color: $secondary_color;
+                    font-size: 0.875rem;
+                }
+            }
+        }
+    }
+
+    .header__sectiom__logo {
+        @include flex (row, space-between, center);
+        border: 1px solid $main_color;
+        padding: 20px 21%;
+
+        .section__container {
+            .header__link--mod {
+                @include flex (row, center, center);
+                gap: 0 20px;
+                .header__link__name {
+                    color: $primary_color;
+                    font-weight: 700;
+                    font-size: 2.25rem;
+                    letter-spacing: 0.225rem;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .section__container {
+            .section__subcontainer {
+                @include flex (row, center, center);
+                gap: 0 40px;
+                .header__link {
+                    color: $additional_color;
+                }
+                .header__btn {
+                    @include btn ($primary_color, $add_main-color, $additional_color);
+                    padding: 12px 0;
+                }
+                .header__btn:hover {
+                    background-color: $primary_color;
+                    color: $add_main-color;
+                    transition: all 1s;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .header__section__subnav {
+        @include flex (row, center, center);
+
+        .header__subnav {
+            @include flex (row, center, center);
+            gap: 0 40px;
+            padding: 30px 0;
+
+            .nav__list {
+                .subnav__link {
+                    color: $additional_color;
+                }
+            }
+        }
+    }
+}

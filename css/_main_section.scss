@@ -1,0 +1,39 @@
+.main__heading {
+    @include font_style ($additional_color, 700, 1.5rem);
+    padding:80px 21% 38px;
+}
+
+.main__section {
+    @include flex (row, center, center);
+    gap: 0 30px;
+    padding: 0 21%;
+    
+    .main__section--item {
+        width: calc(100%/4);
+        @include flex (column, center, center);
+        background-color: $add_main-color;
+        padding: 25px 30px;
+
+        .main__section__text {
+            @include font_style ($secondary_color, 400, 0.875rem);
+            padding: 20px 0;
+            text-align: center;
+        }
+        .main__section__item {
+            @include font_style ($additional_color, 500, 1.3125rem);
+            padding-bottom: 20px;
+        }
+        .main__section__btn {
+            border-radius: 30px;
+            padding: 9px 52px;
+            background-color: $primary_color;
+            color: $add_main-color;
+        }
+        .main__section__btn:hover {
+            background-color: $main_color;
+            color: $additional_color;
+            transition: all 1s;
+            cursor: pointer;
+        }
+    }
+}

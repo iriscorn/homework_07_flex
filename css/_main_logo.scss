@@ -1,0 +1,23 @@
+.main__logo {
+    background: url(../img/banner.svg) lightgray 50% / cover no-repeat;
+    padding: 192px 21%;
+    
+    .main__logo__heading {
+        @include font_style ($add_main-color, 700, 3rem);
+    }
+    .main__logo__text {
+        @include font_style ($add_main-color, 400, 0.875rem);
+        padding: 50px 0 30px;
+    }
+    .main__logo__btn {
+        display: block;
+        text-align: center;
+        @include btn ($add_main-color, $primary_color, $add_main-color);
+        padding: 12px 0;
+    }
+    .main__logo__btn:hover {
+        @include btn ($add_main-color, $add_main-color, $additional_color);
+        transition: all 1s;
+        cursor: pointer;
+    }
+}
